@@ -5,47 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/vegan.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Contato</title>
 </head>
 <body>
     <header>
-        <div>
-            <img width="1335rem" height="60rem" src="assets/img/green.jpg" alt="Cabeçalho verde em tom pastel com degradê">
-            <img width="50rem" src="assets/img/plantinha.png" alt="Plantinha em preto e branco">
-            <h1>Veg-se</h1>
+        <div id="cabecalho">
+            <div id="logo">
+                <a href="index.html"><img id="logo-img" src="assets/img/vegan.png" alt="Plantinha em preto e branco"><a> 
+                <h1 id="nome">Veg-se</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><img onclick="darkMode()" class="darkmode-img" width="30px" height="30px" src="assets/img/darkmode.png" alt="Darkmode icon" title="Dark/Light Theme"></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="contato.html">Contato</a>
-                </li>
-            </ul>
-        </nav>
     </header>
     <main>
-        <h1>Quer alguma receita que não está no site? Entre em contato comigo!</h1>
-        <form>
-            <label for="nome">Nome:</label> <br>
-            <input type="text" id="nome">
-            <br>
-            <br>
-            <label for="email">E-mail:</label> <br>
-            <input type="email" id="email">
-            <br>
-            <br>
-            <label for="assunto">Assunto:</label> <br>
-            <textarea name="assunto" id="assunto" cols="60" rows="5"></textarea>
-            <br>
-            <br>
-            <button>Enviar</button>
-        </form>
+        <div class="area">
+            <h1>Quer fazer uma sugestão, dar um feedback ou pedir alguma receita que não está no site? Entre em contato comigo!</h1>
+            <div class="formulario">
+        
+                <form class="form">
+                    <div class="form-item col-responsive">
+                        <input onkeyup="validaNome()" class="input" type="text" id="name"/>
+                        <label class="label" for="nome">Nome</label>
+                    </div>
+                    <div id = "txtNome"></div> 
+                    <div class="form-item col-responsive">
+                        <input onkeyup="validaEmail()" class="input" type="text" id="email"/>
+                        <label class="label" for="email">E-mail</label>
+                    </div>
+                    <div id = "txtEmail"></div> 
+                    <div class="form-item">
+                        <input onkeyup="validaAssunto()" class="input" type="text" id="assunto"/>
+                        <label class="label" for="assunto">Assunto</label>
+                    </div>
+                    <div id = "txtAssunto"></div> 
+                    <div class="form-item">
+                        <textarea onkeyup="validaMensagem()" class="textarea" name="mensagem" id="textarea"></textarea>
+                        <label class="label" for="mensagem">Mensagem</label>
+                    </div>
+                    <div id = "txtMensagem"></div> 
+                    <div class="form-item">
+                        <button onclick="enviar()" class="botao">Enviar</button>
+                        <!--<input class="botao" type="submit" value="Enviar"/>-->
+                    </div>
+                </form>
+                
+             </div>
+        </div>
     </main>
+    <hr class="rodape">
     <footer>
+        <div class="github">
+            <a href="https://github.com/psgabriele/fundamentos-web" target="_blank" title="veg-se github repository"><img src="assets/img/github.png" alt="Github logo" width="50px" height="50px" /></a>
+        </div>
+        <p>Developed by <a href="https://www.linkedin.com/in/gabriele-s%C3%A1/">Gabriele Sá</a></p>
         <p>&copy; Copyright Veg-se 2022</p>
-        <img width="1335rem" height="200rem" src="assets/img/green.jpg" alt="Rodapé verde em tom pastel com degradê">
     </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -5,84 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/vegan.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Receitas Veganas</title>
 </head>
 <body>
     <header>
-        <div>
-            <img width="1335rem" height="60rem" src="assets/img/green.jpg" alt="Cabeçalho verde em tom pastel com degradê">
-            <img width="50rem" src="assets/img/plantinha.png" alt="Plantinha em preto e branco">
-            <h1>Veg-se</h1>
+        <div id="cabecalho">
+            <div id="logo">
+                <a href="index.html"><img id="logo-img" src="assets/img/vegan.png" alt="Plantinha em preto e branco"><a> 
+                <h1 id="nome">Veg-se</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><img onclick="darkMode()" class="darkmode-img" width="30px" height="30px" src="assets/img/darkmode.png" alt="Darkmode icon" title="Dark/Light Theme"></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="contato.html">Contato</a>
-                </li>
-            </ul>
-        </nav>
     </header>
     <main>
-        <section>
-            <h1>Receitas Veganas</h1>
-            <p>Encontre uma variedade de receitas veganas em um só lugar!</p>
-        </section>
-        <div>
-            <section>
-                <h2>Torta de Liquidificador</h2>
-                <h3>Ingredientes</h3>
-                <h4>Recheio</h4>
-                <ul>
-                    <li>1 colher (sopa) de azeite de oliva</li>
-                    <li>1 cebola pequena - em cubos pequenos</li>
-                    <li>1 dente de alho </li>
-                    <li>1 cenoura  - em cubos pequenos </li>
-                    <li>1 tomate sem casca - em cubos pequenos </li>
-                    <li>1/2 xícara de ervilha</li>
-                    <li>1 xícara de milho </li>
-                    <li>1 colher (chá) sal</li>
-                    <li>1 colher (café) de páprica defumada</li>
-                    <li>1/2 xícara de azeitona </li>
-                    <li>Pimenta do reino a gosto </li>
+        <div class="fundo">
+            <div class="card">
+                <div class="welcome">
+                    <h1>Boas vindas ao Veg-se!</h1>
+                    <p>Encontre uma variedade de receitas veganas em um só lugar e aproveite.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-slide">
+            <input type="radio" class="slide-controller" name="slide" checked />
+            <input type="radio" class="slide-controller" name="slide" />
+            <div class="slide-show" >
+                <ul class="slides-list" >
+                  <li class="slide" >
+                    <h2>Torta de Liquidificador</h2>
+                    <section>
+                        <div class="ingredientes">
+                        <h3>Ingredientes</h3>
+                        <h4>Recheio</h4>
+                        <ul>
+                            <li>1 colher (sopa) de azeite de oliva</li>
+                            <li>1 cebola pequena - em cubos pequenos</li>
+                            <li>1 dente de alho </li>
+                            <li>1 cenoura  - em cubos pequenos </li>
+                            <li>1 tomate sem casca - em cubos pequenos </li>
+                            <li>1/2 xícara de ervilha</li>
+                            <li>1 xícara de milho </li>
+                            <li>1 colher (chá) sal</li>
+                            <li>1 colher (café) de páprica defumada</li>
+                            <li>1/2 xícara de azeitona </li>
+                            <li>Pimenta do reino a gosto </li>
+                        </ul>
+                        <h4>Massa</h4>
+                        <ul>
+                            <li>1/3 xícara de óleo de girassol </li>
+                            <li>1/2 cebola pequena </li>
+                            <li>1 colher (chá) sal </li>
+                            <li>1 xícara de água </li>
+                            <li>1 colher (café) cúrcuma </li>
+                            <li>1 + 1/2 xícara de farinha de trigo </li>
+                            <li>1/2 colher (sopa) fermento </li>
+                            <li>Orégano a gosto</li>
+                        </ul>
+                        </div>
+                        <div class="preparo">
+                            <h3>Modo de Preparo</h3>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/eX2_GiNzkbw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </section>
+                  </li>
+                  <li class="slide" >
+                    <h2>Cookie</h2>
+                    <section>
+                        <div class="ingredientes">
+                            <h3>Ingredientes</h3>
+                            <ul>
+                                <li>160 g de açúcar demerara</li>
+                                <li>90 g de açúcar mascavo</li>
+                                <li>25 g de melado de cana</li>
+                                <li>180 g de óleo de coco em temperatura ambiente</li>
+                                <li>300 ml de leite vegetal</li>
+                                <li>500 g de farinha de trigo</li>
+                                <li>1 colher de sopa de fermento em pó químico</li>
+                                <li>Gotas de chocolate</li>
+                            </ul>
+                        </div>
+                        <div class="preparo">
+                            <h3>Modo de Preparo</h3>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/b-i-5r6OoBQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </section>
+                  </li>
                 </ul>
-                <h4>Massa</h4>
-                <ul>
-                    <li>1/3 xícara de óleo de girassol </li>
-                    <li>1/2 cebola pequena </li>
-                    <li>1 colher (chá) sal </li>
-                    <li>1 xícara de água </li>
-                    <li>1 colher (café) cúrcuma </li>
-                    <li>1 + 1/2 xícara de farinha de trigo </li>
-                    <li>1/2 colher (sopa) fermento </li>
-                    <li>Orégano a gosto</li>
-                </ul>
-                <h3>Modo de Preparo</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/eX2_GiNzkbw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </section>
-            <section>
-                <h2>Cookie</h2>
-                <h3>Ingredientes</h3>
-                <ul>
-                    <li>160 g de açúcar demerara</li>
-                    <li>90 g de açúcar mascavo</li>
-                    <li>25 g de melado de cana</li>
-                    <li>180 g de óleo de coco em temperatura ambiente</li>
-                    <li>300 ml de leite vegetal</li>
-                    <li>500 g de farinha de trigo</li>
-                    <li>1 colher de sopa de fermento em pó químico</li>
-                    <li>Gotas de chocolate</li>
-                </ul>
-                <h3>Modo de Preparo</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/b-i-5r6OoBQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </section>
+              </div>
         </div>
     </main>
+    <hr class="rodape">
     <footer>
+        <div class="github">
+            <a href="https://github.com/psgabriele/fundamentos-web" target="_blank" title="veg-se github repository"><img src="assets/img/github.png" alt="Github logo" width="50px" height="50px" /></a>
+        </div>
+        <p>Developed by <a href="https://www.linkedin.com/in/gabriele-s%C3%A1/">Gabriele Sá</a></p>
         <p>&copy; Copyright Veg-se 2022</p>
-        <img width="1335rem" height="200rem" src="assets/img/green.jpg" alt="Rodapé verde em tom pastel com degradê">
     </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

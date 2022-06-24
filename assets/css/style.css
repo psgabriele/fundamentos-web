@@ -1,0 +1,281 @@
+/*Estilo geral do site*/
+:root {
+    --fundo: #F5FFFA;
+    --text: #1C1C1C;
+}
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: var(--fundo);
+    color: var(--text);
+}
+#cabecalho {
+    background: #ACFC77;
+    width: 100%;
+    height: 12.8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.46vw;
+    position: fixed;
+    z-index: 99;
+}
+#logo-img {
+    width: 40px;
+}
+#nome {
+    margin-left: 15px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #1C1C1C;
+}
+#logo {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+}
+nav li {
+    display: inline;
+    margin: 0 20px 0 0;
+    position: relative;
+    right: 6vw;
+}
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #1C1C1C;
+    font-weight: bold;
+    font-size: 20px;
+}
+nav a:hover {
+    color: #557D3B;
+}
+.darkmode-img {
+    margin-left: 5px;
+    transition: 0.1s;
+}
+.darkmode-img:hover {
+    width: 33px;
+    height:33px;
+}
+.rodape {
+    margin-top: 100px;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 0 0;
+}
+.github {
+    margin-bottom: 30px;
+}
+footer p {
+    margin-bottom: 30px;
+}
+/*Dark Theme*/
+.dark-theme {
+    background: var(--text);
+    color: var(--fundo)
+}
+
+/*Estilo da página index.html*/
+.fundo {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: 750px;
+    height: 250px;
+    display:flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 10px;
+    background-image: url(../img/comida.jpg);
+    background-size: cover;
+    border: 10px solid #ACFC77;
+}
+.welcome {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 390px;
+    margin-bottom: 65px;
+    color:#F5FFFA;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.welcome h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.welcome p {
+    font-size: 25px;
+}
+.container-slide {
+    background: #acfc77c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    width: 100vw;
+}
+
+.slide-controller:nth-child(1):checked ~ .slide-show .slides-list{--selected-item: 0;}
+.slide-controller:nth-child(2):checked ~ .slide-show .slides-list{--selected-item: 1;}
+
+.slide-show{
+    overflow: hidden;
+  }
+
+.slides-list{
+  --selected-item: 0;
+  --total-items: 2;
+  list-style-type: none;
+  margin: 10px 0;
+  padding: 0;
+  position: relative;
+  left: calc(var(--selected-item) * -100%);
+  width: calc(var(--total-items) * 100%);
+  transition: left 0.4s;
+  
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+.slide section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 60px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.slide h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+}
+.ingredientes h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.ingredientes h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.ingredientes ul {
+    margin-bottom: 4px;
+}
+.ingredientes li {
+    font-size: 18px;
+    margin-bottom: 1px;
+    list-style-type:disc;
+}
+.preparo h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+/*Estilo da página contato.html*/
+.area {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    padding: 10vw 0 10vw 0;
+}
+.area h1 {
+    padding: 0 210px 50px 210px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+input, textarea {
+    border: 0;
+    outline: 0;
+    font-size: 1.2em;
+    background: transparent;
+    color: #797979;
+    position: relative;
+    font-family: 'open_sansregular';
+  }
+  textarea { resize: none; }
+  .formulario {
+    max-width: 550px;
+    margin: 0 auto;
+    border-radius: 2px;
+  }
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .form-item {
+    position: relative;
+    width: 100%;
+    padding: 1em;
+  }
+  #txtNome, #txtEmail, #txtAssunto, #txtMensagem {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .form-item .textarea {
+    height: 5em;
+  }
+  .form-item .input, .form-item .textarea {
+    display: block;
+    padding: 1em;
+    width: 100%;
+    transition: all 0.3s;
+    border-bottom: 2px solid #557D3B;
+  }
+  .form-item .input:focus, .form-item .textarea:focus {
+    border-bottom: 2px solid #333333;
+  }
+  .form-item .input:valid + .label, .form-item .input:focus + .label, .form-item .textarea:valid + .label, .form-item .textarea:focus + .label {
+    top: 0.2em;
+    left: 1em;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .form-item .input:valid, .form-item .textarea:valid {
+    border-bottom: 2px solid #557D3B;
+  }
+  .form-item .label {
+    position: absolute;
+    top: 2em;
+    left: 2em;
+    text-transform: capitalize;
+    transition: all 0.3s;
+  }
+  .form-item .botao {
+    display: block;
+    width:120px;
+    padding: 0.8em 0.6em;
+    border:2px #557D3B solid;
+    border-radius:3px; 
+    color: #557D3B;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .form-item .botao:hover {
+    background: #828282;
+    color: #ffffff;
+    border:2px #828282 solid;
+  }
+  .form-item .botao:active {
+    background-color:#ff9000;
+    color:#ffffff;
+    border:2px #ff9000 solid;
+  }
